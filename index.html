@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculator</h1>
+     <div class = "calculator">
+         <div class="flex-grid">
+       
+        <button id = "answer-box"class="top-row">
+            <p id="inputed-numbers"></p>
+        </button>
+    </div>
+    
+         <div class = "flex-grid">
+         <button id = "backspace-button"class="top-row"value = "delete">DEL</button>
+         <button onclick="clearText()" id = "clear-button"class="top-row"value="clear">AC</button>
+         <button onclick="display(this.value)" id = "zero"class="top-row"value="0">0</button>
+         <button onclick="display(this.value)"id = "one"class="top-row"value="1">1</button>
+        </div>
+        <div class="flex-grid">
+         <button onclick="display(this.value)" id = "two"class="top-row"value="2">2</button>
+         <button onclick="display(this.value)" id = "three"class="top-row"value="3">3</button>
+         <button onclick="display(this.value)" id = "four"class="top-row"value="4">4</button>
+         <button onclick="display(this.value)" id = "five"class="top-row"value="5">5</button>
+        </div>
+        <div class="flex-grid">
+         <button onclick="display(this.value)" id = "six"class="top-row"value="6">6</button>
+         <button onclick="display(this.value)" id = "seven"class="top-row"value="7">7</button>
+         <button onclick="display(this.value)" id = "eight"class="top-row"value="8">8</button>
+         <button onclick="display(this.value)" id = "nine"class="top-row"value="9">9</button>
+        </div>
+        <div class="flex-grid">
+         <button onclick="display(this.value)" id = "decimal-button"class="top-row">.</button>
+         <button onclick="display(this.value)" id = "equal"class="top-row">=</button>
+        </div>
+        <div class="flex-grid">
+            <button onclick="display(this.value)" id = "add-button"class="top-row"value="+">+</button>
+            <button onclick="display(this.value)" id = "subtract-button"class="top-row"value="-">-</button>
+            <button onclick="display(this.value)" id = "multiply-button"class="top-row"value="*">*</button>
+            <button onclick="display(this.value)" id = "divide-button"class="top-row"value="/">/</button>
+           </div>
+     </div>
+    </div>
+    <script src = "script.js"></script>
+</body>
+</html>

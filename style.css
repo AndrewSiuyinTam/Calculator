@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: rgb(224, 223, 223);
+}
+h1{
+    text-align: center;
+    color: coral;
+    font-family: asap,sans-serif;
+    padding-top: 24px;
+    font-size: 35px;
+    text-shadow: 2px 2px;
+}
+.calculator{
+    background: gray;
+    padding:25px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 450px;
+    width: 400px;
+    margin-top: 25px;
+    margin-left: 34%;
+    border: 1px solid black;
+    border-radius: 5px;
+   
+
+}
+.flex-grid{
+    display: flex;
+    gap: 6px;
+}
+.calculator .top-row{
+    flex: 1;
+}
+.top-row{
+    height: 60px;
+    flex:1;
+}
+.row-two{
+    flex:1;
+}
+.row-three{
+    flex:1;
+}
+.row-four{
+    flex:1;
+}
+.last-row{
+    flex:1;
+}
+#answer-box{
+    background: orange;
+    font-size: 30px;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+#backspace-button{
+    font-size: 30px;
+    padding: 5px;
+    color:white;
+    background-color: #242c3d;
+}
+#clear-button{
+    font-size: 30px;
+    padding: 5px;
+    background-color: #242c3d;
+    color:white;
+}
+#zero{
+    background-color: #242c3d;
+    border: 1px solid blue;
+    text-align: center;
+    color: teal;
+    font-size: 30px;
+    padding: 5px;
+}
+#one{
+    background-color: #242c3d;
+    border: 1px solid blue;
+    text-align: center;
+    color: teal;
+    font-size: 30px;
+    padding: 5px;
+}
+#two{
+    background-color: #242c3d;
+    border: 1px solid blue;
+    text-align: center;
+    color: teal;
+    font-size: 30px;
+    padding: 5px;
+}
+#three{
+    background-color: #242c3d;
+    border: 1px solid blue;
+    text-align: center;
+    color: teal;
+    font-size: 30px;
+    padding: 5px;
+}
+#four{
+    background-color: #242c3d;
+    border: 1px solid blue;
+    text-align: center;
+    color: teal;
+    font-size: 30px;
+    padding: 5px;
+}
+#five{
+    background-color: #242c3d;
+    border: 1px solid blue;
+    text-align: center;
+    color: teal;
+    font-size: 30px;
+    padding: 5px;
+}
+#six{
+    background-color: #242c3d;
+    border: 1px solid blue;
+    text-align: center;
+    color: teal;
+    font-size: 30px;
+    padding: 5px;
+}
+#seven{
+    background-color: #242c3d;
+    border: 1px solid blue;
+    text-align: center;
+    color: teal;
+    font-size: 30px;
+    padding: 5px;
+}
+#eight{
+    background-color: #242c3d;
+    border: 1px solid blue;
+    text-align: center;
+    color: teal;
+    font-size: 30px;
+    padding: 5px;
+}
+#nine{
+    background-color: #242c3d;
+    border: 1px solid blue;
+    text-align: center;
+    color: teal;
+    font-size: 30px;
+    padding: 5px;
+}
+
+#decimal-button{
+    background-color: #242c3d;
+    font-size: 30px;
+    color:white;
+    padding: 5px;
+}
+#equal{
+    background-color: #242c3d;
+    font-size: 30px;
+    color:white;
+    padding: 5px;
+}
+#add-button{
+    background-color: #242c3d;
+    font-size: 30px;
+    color:white;
+    padding: 5px;
+}
+#subtract-button{
+    background-color: #242c3d;
+    font-size: 30px;
+    color:white;
+    padding: 5px;
+}
+#multiply-button{
+    background-color: #242c3d;
+    font-size: 30px;
+    color:white;
+    padding: 5px;
+}
+#divide-button{
+    background-color: #242c3d;
+    font-size: 30px;
+    color:white;
+    padding: 5px;
+}
