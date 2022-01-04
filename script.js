@@ -1,6 +1,7 @@
 let inputed_numbers = document.getElementById('inputed-numbers');
 let numStack = [];
 let operatorStack = [];
+let boolean = true;
 function add(num1,num2){
     return num1 + num2;
 }
@@ -69,6 +70,10 @@ function display(clicked_id) {
         inputed_numbers.innerText = inputed_numbers.innerText.substring(0, inputed_numbers.innerText.length - 1);
     }
     else{
+        if(boolean == false){
+            inputed_numbers.innerText = "";
+            boolean = true;
+        }
         inputed_numbers.innerText += clicked_id;
         let str = inputed_numbers.innerText;
     }
@@ -81,6 +86,7 @@ function display(clicked_id) {
     
 }
 function parse(str) {
+    
     return Function(`'use strict'; return (${str})`)()
   }
   
@@ -89,13 +95,13 @@ function clearText(){
     numStack = [];
 }
 function pressesEqual(){
+    if(inputed_numbers.innerText.includes('/0')){
+        inputed_numbers.innerText = "ERROR: Divide by Zero";
+    }
    let result =  parse(inputed_numbers.innerText);
-    inputed_numbers.innerText= result;
-    
-     
-   
-
-
+   let roundedResult = Math.round(result * 100) / 100;
+    inputed_numbers.innerText= roundedResult;
+    boolean = false;
 }
 
 
