@@ -30,6 +30,10 @@ h1{
    
 
 }
+#inputed-numbers{
+    float: right;
+    color: white;
+}
 .flex-grid{
     display: flex;
     gap: 6px;

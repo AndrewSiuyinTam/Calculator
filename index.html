@@ -18,7 +18,7 @@
     </div>
     
          <div class = "flex-grid">
-         <button id = "backspace-button"class="top-row"value = "delete">DEL</button>
+         <button onclick="display(this.value)" id = "backspace-button"class="top-row"value = "delete">DEL</button>
          <button onclick="clearText()" id = "clear-button"class="top-row"value="clear">AC</button>
          <button onclick="display(this.value)" id = "zero"class="top-row"value="0">0</button>
          <button onclick="display(this.value)"id = "one"class="top-row"value="1">1</button>
@@ -36,8 +36,8 @@
          <button onclick="display(this.value)" id = "nine"class="top-row"value="9">9</button>
         </div>
         <div class="flex-grid">
-         <button onclick="display(this.value)" id = "decimal-button"class="top-row">.</button>
-         <button onclick="display(this.value)" id = "equal"class="top-row">=</button>
+         <button onclick="display(this.value)" id = "decimal-button"class="top-row"value=".">.</button>
+         <button onclick="pressesEqual()" id = "equal"class="top-row">=</button>
         </div>
         <div class="flex-grid">
             <button onclick="display(this.value)" id = "add-button"class="top-row"value="+">+</button>

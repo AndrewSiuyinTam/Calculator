@@ -1,4 +1,6 @@
 let inputed_numbers = document.getElementById('inputed-numbers');
+let numStack = [];
+let operatorStack = [];
 function add(num1,num2){
     return num1 + num2;
 }
@@ -25,15 +27,79 @@ function operate(operator,num1,num2){
         return divide(num1,num2);
      }
 }
+function evaluate(rpn) {
+    const stack = [];
+  
+    for (let scanner = 0; scanner < rpn.length; scanner++) {
+      const token = rpn[scanner];
+  
+      if (/[+\-/*^]/.test(token)) {
+        stack.push(operate(token, stack));
+        continue;
+      }
+  
+      // token is a number
+      stack.push(token);
+    }
+  
+    return stack.pop();
+  }
+  
+  function operate(operator, stack) {
+    const a = stack.pop();
+    const b = stack.pop();
+  
+    switch (operator) {
+      case '+':
+        return b + a;
+      case '-':
+        return b - a;
+      case '*':
+        return b * a;
+      case '/':
+        return b / a;
+      case '^':
+        return Math.pow(b, a);
+      default:
+        throw new Error(`Invalid operator: ${operator}`);
+    }
+  }
 function display(clicked_id) {
-    inputed_numbers.innerText += clicked_id;
+    if(clicked_id === 'delete'){
+        inputed_numbers.innerText = inputed_numbers.innerText.substring(0, inputed_numbers.innerText.length - 1);
+    }
+    else{
+        inputed_numbers.innerText += clicked_id;
+        let str = inputed_numbers.innerText;
+    }
+    
+    if(clicked_id === '+' || clicked_id === '-'|| clicked_id === '*'|| clicked_id === '/'){
+
+    }
+
+    numStack.push(clicked_id)
     
 }
+function parse(str) {
+    return Function(`'use strict'; return (${str})`)()
+  }
+  
 function clearText(){
     inputed_numbers.innerText = "";
+    numStack = [];
 }
-function display1(){
+function pressesEqual(){
+   let result =  parse(inputed_numbers.innerText);
+    inputed_numbers.innerText= result;
     
+     
+   
+
+
 }
+
+
+
+
 
 console.log(document.getElementById('six').value);
