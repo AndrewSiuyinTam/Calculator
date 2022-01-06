@@ -1,2 +1,2 @@
 # Calculator
-View at: https://andrewsuiyintam.github.io/Calculator/
+View at: https://andrewsiuyintam.github.io/Calculator/
